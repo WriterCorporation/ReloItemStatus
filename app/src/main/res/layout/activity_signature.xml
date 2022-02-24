@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signature">
+
+    <LinearLayout
+        android:id="@+id/ll_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp"
+        android:weightSum="2">
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/csignatare_pad"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/signature_border"
+            app:penColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="32dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clearBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/clear_ripple_effect"
+                    android:text="CLEAR"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:orientation="horizontal"
+                android:paddingLeft="32dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/saveBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/custom_ripple_effect"
+                    android:text="Submit"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_latlong"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/_42sdp"
+        android:gravity="center_horizontal"
+        android:text="lat long"
+        android:textColor="@color/lightGrey"
+        />
+
+
+
+
+
+
+</RelativeLayout>
